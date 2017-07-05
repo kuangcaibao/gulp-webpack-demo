@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack-dev-server --host 192.168.0.53 --open-page html/index.html",
-    "build": "gulp"
+    "build": "eslint src/*.js && gulp",
+    "eslint": "eslint src/*.js"
   },
   "keywords": [
     "gulp",

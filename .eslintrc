@@ -1,0 +1,47 @@
+{
+
+  "parserOptions": {
+    "sourceType": "module"
+  },
+
+  // 开启 eslint 的推荐检查
+  // http://eslint.cn/docs/rules/
+  "extends": "eslint:recommended",
+
+  "globals": {
+    "$": true
+  },
+
+  // 环境定义了预定义的全局变量
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "amd": true,
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+
+    /**
+     * "off" / 0        - 关闭规则
+     * "warn" / 1       - 开启规则，对不符合规则做警告提示，不会导致程序退出
+     * "error" / 2      - 开启规则，符不符合规则做错误提示，会导致程序退出
+     */
+
+    // 缩进，默认 2 个空格
+    "indent": [1, 2],
+
+    // 大括号规则
+    "curly": [2, "multi-or-nest"],
+
+    // 打开 console
+    "no-console": 0,
+
+    // 操作符周围要求空格
+    "space-infix-ops": 2,
+
+    // 要求使用分号
+    "semi": 2
+  }
+}
