@@ -1,7 +1,10 @@
 import "./index.css"
 
 const foo = () => {
-  console.log("foo");
+  
+  $(`#app`).html(`
+    <h1 class="hello">Welcome gulp + webpack</h1>
+  `);
 }
 
 foo();

@@ -11,18 +11,22 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "tmp"),
-    publicPath: "/assets/"
+
+    // 注释掉 publicPath 是为了保证使用 url-loader 的时候，css 中的路径正常
+    // publicPath: "/assets/"
   },
 
   module: {
 
     rules: [
 
+      // js 处理
       {
         test: /\.js$/,
         loader: "babel-loader"
       },
 
+      // css 处理
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
@@ -42,6 +46,20 @@ module.exports = {
             }
           ]
         })
+      },
+
+      // 外部文件处理
+      {
+        test: /\.(jpg|png|gif)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+              name: "images/[name].[ext]"
+            }
+          }
+        ]
       }
     ]
   },
@@ -65,6 +83,6 @@ module.exports = {
     contentBase: path.resolve(__dirname),
     compress: true,
     port: 8914,
-    open: "http://192.168.0.53:8914"
+    open: true
   }
 }
