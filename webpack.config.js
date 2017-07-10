@@ -82,7 +82,7 @@ module.exports = {
 
     contentBase: path.resolve(__dirname),
     compress: true,
-    port: 8914,
+    port: 8912,
     open: true
   }
 }
