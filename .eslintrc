@@ -9,7 +9,11 @@
   "extends": "eslint:recommended",
 
   "globals": {
-    "$": true
+    "$": true,
+    "FormatResult": true,
+    "__jyCallTql": true,
+    "__hqCallTql": true,
+    "__webCallTql": true
   },
 
   // 环境定义了预定义的全局变量
@@ -30,10 +34,12 @@
      */
 
     // 缩进，默认 2 个空格
-    "indent": [1, 2],
+    "indent": [1, 2, {
+      "SwitchCase": 1
+    }],
 
     // 大括号规则
-    "curly": [2, "multi-or-nest"],
+    "curly": [2, "all"],
 
     // 打开 console
     "no-console": 0,

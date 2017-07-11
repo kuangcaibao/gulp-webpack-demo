@@ -15,6 +15,10 @@ const rev = require("gulp-rev");
 const revcssurl = require("gulp-rev-css-url");
 const rename = require("gulp-rename");
 
+// 版本信息
+const { version, author } = require("./package.json");
+const time = new Date().toLocaleString();
+
 // 使用 webpack 生成文件
 gulp.task("webpack", function() {
 
@@ -33,7 +37,11 @@ gulp.task("uglify:js", function(cbk) {
       fileInfo.basename += ".min";
     }),
     sourcemaps.init(),
-    uglify(),
+    uglify({
+      output: {
+        preamble: `/* \r\n @version: ${version} \r\n @author: ${author} \r\n @time: ${time} \r\n */`
+      }
+    }),
     sourcemaps.write(".", {
       mapFile: function(mapFilePath) {
         return mapFilePath.replace(".js.map", ".map.js");
