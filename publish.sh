@@ -6,3 +6,9 @@ echo ""
 
 git add .
 git commit
+
+echo ""
+echo "--- git push ---"
+echo ""
+
+git push origin master
