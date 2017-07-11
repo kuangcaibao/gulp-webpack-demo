@@ -12,3 +12,6 @@ echo "--- git push ---"
 echo ""
 
 git push origin master
+
+echo ""
+echo "--- publish success ---"
