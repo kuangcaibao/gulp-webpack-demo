@@ -1,7 +1,7 @@
 {
-  "name": "gulp-webpack-demo",
+  "name": "tdx-template",
   "version": "1.0.0",
-  "description": "这是一个 gulp + webpack 的 demo 工程",
+  "description": "模板工程，供脚手架使用",
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack-dev-server --host 192.168.0.53 --open-page html/index.html",
