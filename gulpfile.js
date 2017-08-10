@@ -118,7 +118,7 @@ gulp.task("rev", function(cbk) {
     .pipe(gulp.dest("rev"));
 })
 
-gulp.task("default", 
+gulp.task("default",
   gulpSequence(
     ["clean:dist", "clean:tmp", "clean:rev"],
     "webpack",
