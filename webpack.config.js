@@ -38,7 +38,8 @@ module.exports = {
                 plugins: [ 
                   require("autoprefixer")({
                     browsers: [
-                      "last 2 versions"
+                      "last 2 versions",
+                      "last 6 iOS versions"
                     ]
                   }) 
                 ]
