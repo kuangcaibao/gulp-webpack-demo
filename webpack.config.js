@@ -16,9 +16,23 @@ module.exports = {
     // publicPath: "/assets/"
   },
 
+  resolve: {
+    alias: {
+      pages: path.resolve(__dirname, "src/pages"),
+      components: path.resolve(__dirname, "src/components"),
+      layouts: path.resolve(__dirname, "src/layouts")
+    }
+  },
+
   module: {
 
     rules: [
+
+      // vue 处理
+      {
+        test: /\.vue$/,
+        loader: "vue-loader"
+      },
 
       // js 处理
       {

@@ -1,0 +1,16 @@
+html {
+  background-color: #fff;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+
+body {
+  /*background-color: #fff;*/
+  /*min-width: 600px;*/
+  overflow: hidden;
+}
+
+.tdx-loading {
+  background: url(./res/loading_white.gif) center center no-repeat;
+  height: 100px;
+}
